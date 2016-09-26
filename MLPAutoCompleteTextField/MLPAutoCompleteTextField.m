@@ -500,7 +500,7 @@ withAutoCompleteString:(NSString *)string
     [self setShouldResignFirstResponderFromKeyboardAfterSelectionOfAutoCompleteRows:YES];
     [self setAutoCompleteRowHeight:40];
     [self setAutoCompleteFontSize:13];
-    [self setMaximumNumberOfAutoCompleteRows:3];
+    [self setMaximumNumberOfAutoCompleteRows:5];
     [self setPartOfAutoCompleteRowHeightToCut:0.5f];
     
     [self setMaximumEditDistance:100];
@@ -783,6 +783,7 @@ withAutoCompleteString:(NSString *)string
     [newTableView setDataSource:textField];
     [newTableView setScrollEnabled:YES];
     [newTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [newTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
     return newTableView;
 }
